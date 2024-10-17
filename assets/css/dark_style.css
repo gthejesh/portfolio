@@ -126,7 +126,12 @@ h2 {
 /* About Details (Left) */
 .about-details {
     flex: 1.5;
-    max-width: 80%;
+}
+
+@media (min-width: 768px) {
+    .about-details {
+        max-width: 80%;
+    }
 }
 
 .about-photo {

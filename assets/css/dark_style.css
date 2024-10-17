@@ -24,20 +24,16 @@ body {
     background-clip: padding-box, border-box;
 }
 
+
+/* Basic Header Styling */
 header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #1f1f1f;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     z-index: 1000;
-}
-
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #ffffff;
 }
 
 nav ul {
@@ -63,22 +59,101 @@ header .theme-toggle {
     right: 20px;
     transform: translateY(-50%);
     border: none;
+    background-color: transparent;
 }
 
-header .theme-toggle #light-icon {
+header .theme-toggle img {
     max-height: 32px;
-    background-color: #1f1f1f;
-    display: block;
-    border: none;
 }
 
 header .theme-toggle #dark-icon {
-    max-height: 32px;
     display: none;
 }
 
 .active {
     color: rgb(0, 255, 8);
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 35px;
+    color: #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hide the navigation menu for smaller screens */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    /* When screen width is less than 768px */
+    
+    header {
+        padding: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background-color: #1f1f1f;
+        display: none;
+        gap: 10px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .theme-toggle {
+        right: 60px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    header {
+        padding: 32px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .menu-icon {
+        left: 20px;
+    }
+
+    .theme-toggle {
+        right: 50px;
+    }
 }
 
 .main {

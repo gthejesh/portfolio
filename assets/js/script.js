@@ -10,6 +10,19 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
+document.getElementById("menu-icon").onclick = function() {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+};
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        var nav = document.querySelector("nav");
+        nav.classList.remove("active");
+    });
+});
+
+
 // const currentHour = new Date().getHours();
 // if (currentHour >= 18 || currentHour < 6) {
 //     themeLink.setAttribute('href', './assets/css/dark_style.css');

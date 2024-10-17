@@ -9,6 +9,18 @@ toggleButton.addEventListener('click', () => {
         themeLink.setAttribute('href', './assets/css/dark_style.css');
     }
 });
+
+// const currentHour = new Date().getHours();
+// if (currentHour >= 18 || currentHour < 6) {
+//     themeLink.setAttribute('href', './assets/css/dark_style.css');
+// } else {
+//     themeLink.setAttribute('href', './assets/css/style.css');
+// }
+
+// setInterval(() => {
+//     toggleButton.click();
+// }, 200);
+
 var txt1 = `I'm currently pursuing my B.E. in Computer Science Engineering at Chettinad College
                 of
                 Engineering and Technology, with a CGPA of 7.98 (up to the 6th semester). I have a passion for software

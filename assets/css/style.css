@@ -351,3 +351,76 @@ footer {
         padding: 8px 16px;
     }
 }
+
+#contact {
+    padding: 50px;
+    /* background-color: #ffffff; */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+#contact p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font for links */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker shade on hover */
+}
+
+.contact-info {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space out the sections */
+    margin-top: 30px; /* Space above the contact info */
+}
+
+.contact-details {
+    flex: 1; /* Take up one part of the space */
+    padding-right: 20px; /* Space on the right */
+}
+
+.map-container {
+    flex: 1; /* Take up one part of the space */
+    text-align: left; /* Align map text to the left */
+}
+
+.map-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Set height for the map */
+    border: 0; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the map */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 28px; /* Smaller heading on mobile */
+    }
+
+    #contact p {
+        font-size: 16px; /* Smaller text on mobile */
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack sections on mobile */
+    }
+
+    .contact-details,
+    .map-container {
+        padding: 0; /* Remove padding on mobile */
+        margin-bottom: 20px; /* Space below each section */
+    }
+
+    .map-container iframe {
+        height: 200px; /* Adjust height for mobile */
+    }
+}
+

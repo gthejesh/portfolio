@@ -69,7 +69,7 @@ header .theme-toggle #dark-icon {
 }
 
 .active {
-    color: #ff0000;
+    color: rgb(0, 255, 8);
 }
 
 .main {
@@ -82,23 +82,37 @@ section {
     margin-bottom: 40px;
 }
 
+
+section .text-center{
+    text-align: center;
+}
+
 h2 {
     font-size: 2em;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
-/* about section */
+
 #about {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    margin-top: 0; 
+    margin-bottom: 0; 
+    gap: 25px;
 }
+
 
 #about h1 {
     font-size: 2.5em;
-    color: #ffffff;
+    color: #00ff4c;
+    margin-bottom: 10px;
+}
+
+#about h2 {
+    font-size: 1.8em;
+    color: #a2e7b1;
     margin-bottom: 10px;
 }
 
@@ -115,7 +129,6 @@ h2 {
     max-width: 80%;
 }
 
-/* About Image (Right) */
 .about-photo {
     flex: 1;
     display: flex;
@@ -126,45 +139,27 @@ h2 {
 .about-photo img {
     max-width: 400px;
     border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Image */
 .about-photo img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     #about {
         flex-direction: column;
-        /* text-align: center; */
     }
 
     .about-photo img {
-        /* max-width: 100%; */
         display: none;
     }
 }
 
-.project {
-    border: 1px solid #333;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #1f1f1f;
-}
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #333;
-    color: #e0e0e0;
-}
 
 /* Card Container Styling */
 .card-container {
@@ -197,10 +192,10 @@ footer {
 }
 
 /* Hover Effect */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
 /* Responsive Design */
 @media (max-width: 600px) {
@@ -208,6 +203,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* Skills Container Styling */
 .skills-container {
@@ -270,4 +266,19 @@ footer {
         font-size: 0.8em;
         padding: 8px 16px;
     }
+}
+
+.project {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #1f1f1f;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    color: #e0e0e0;
 }

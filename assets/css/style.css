@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-padding-top: 100px;
 }
 
@@ -46,7 +46,7 @@ nav a {
     font-weight: bold;
 }
 
-header .theme-toggle{
+header .theme-toggle {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -54,7 +54,7 @@ header .theme-toggle{
     border: none;
 }
 
-header .theme-toggle #light-icon{
+header .theme-toggle #light-icon {
     max-height: 25px;
     display: none;
 }
@@ -64,7 +64,7 @@ header .theme-toggle #dark-icon {
     display: block;
 }
 
-.active{
+.active {
     color: #ff0000;
 }
 
@@ -78,10 +78,81 @@ section {
     margin-bottom: 40px;
 }
 
+section .text-center {
+    text-align: center;
+}
+
 h2 {
     font-size: 2em;
     margin-bottom: 10px;
 }
+
+
+/* about section */
+#about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 25px;
+}
+
+#about h1 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #323232;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* About Details (Left) */
+.about-details {
+    flex: 1.5;
+    max-width: 80%;
+}
+
+/* About Image (Right) */
+.about-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.8); */
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.about-photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    .about-photo img {
+        /* max-width: 100%; */
+        display: none;
+    }
+}
+
 
 .project {
     border: 1px solid #ccc;
@@ -144,7 +215,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 20px;
+    margin: 20px 50px 0 50px;
     justify-content: center;
 }
 
@@ -155,9 +226,9 @@ footer {
     border: 1px solid #ccc;
     border-radius: 50px;
     padding: 20px 40px;
-    font-size: 2em;
-        text-align: center;
-    /* max-height: 45px; */
+    font-size: 1.2em;
+    text-align: center;
+    margin: 7px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }

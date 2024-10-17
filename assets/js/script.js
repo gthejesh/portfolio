@@ -9,7 +9,7 @@ toggleButton.addEventListener('click', () => {
         themeLink.setAttribute('href', './assets/css/dark_style.css');
     }
 });
-var txt1 = `I'm Thejesh Bhagavanth G, currently pursuing my B.E. in Computer Science Engineering at Chettinad College
+var txt1 = `I'm currently pursuing my B.E. in Computer Science Engineering at Chettinad College
                 of
                 Engineering and Technology, with a CGPA of 7.98 (up to the 6th semester). I have a passion for software
                 development, specializing in Django web applications, and I'm proficient in languages like C, C++,

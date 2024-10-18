@@ -262,7 +262,13 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    height: auto; /* Allow height to adjust based on content */
+    position: relative;
 }
+
 
 .card h3 {
     margin-bottom: 10px;
@@ -350,6 +356,209 @@ h2 {
     background-color: #f0f0f0;
     border-radius: 20px;
 }
+#achievements {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    gap: 30px; /* Space between the items */
+    justify-content: space-between; /* Evenly space items */
+}
+
+.achievements-item {
+    flex: 1 1 calc(33.333% - 30px); /* 3 items per row, with gap taken into account */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.achievements-item .content {
+    margin-bottom: 20px; /* Adds space between content and image */
+}
+
+.achievements-item .image img {
+    max-width: 100%; /* Makes the image responsive */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .achievements-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .achievements-item {
+        flex: 1 1 100%; /* Make the achievements stack full-width */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.achievements-item h3 {
+    font-size: 24px;
+    color: #0000ff;
+    margin-bottom: 10px;
+}
+
+.achievements-item p {
+    font-size: 16px;
+    color: #666666;
+    margin: 5px 0;
+}
+
+.achievements-item p strong {
+    font-weight: bold;
+    color: #333333;
+}
+
+.achievements-item ul {
+    margin: 10px 0 0 20px;
+    list-style-type: disc;
+}
+
+.achievements-item ul li {
+    font-size: 16px;
+    color: #666666;
+}
+
+@media (max-width: 768px) {
+    .achievements-container {
+        gap: 20px;
+    }
+
+    #achievements h2 {
+        font-size: 28px;
+    }
+
+    .achievements-item h3 {
+        font-size: 22px;
+    }
+
+    .achievements-item p {
+        font-size: 14px;
+    }
+
+    .achievements-item ul li {
+        font-size: 14px;
+    }
+}
+
+
+
+
+#certifications {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+#certifications p{
+    margin-bottom: 10px ;
+}
+
+#certifications .btn {
+    padding: 12px 20px;
+    background-color: #0000ff; /* Green color */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 30px;
+    float: right;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    align-self: flex-end; /* Align the button to the right */
+    margin-top: auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff; /* Light background */
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease; /* Add fade-in effect */
+    color: #333333; /* Dark text color */
+}
+
+.modal-content h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #000000; /* Blue color */
+}
+
+@media (max-width: 1200px) {
+    .modal-content {
+        margin: 50px auto;
+        width: 90%;
+    }
+    .modal-content h2 {
+        font-size: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333; /* Dark color */
+}
+
+.modal .close:hover {
+    color: red;
+}
+
+.modal iframe {
+    border: none;
+}
+
+.modal-content .btn-container {
+    text-align: right; /* Aligns button to the right */
+}
+
+.modal a.btn {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #0000ff; /* Blue color */
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.modal a.btn:hover {
+    background-color: #0000cc; /* Darker shade on hover */
+}
+
 
 #education {
     padding: 50px 0;

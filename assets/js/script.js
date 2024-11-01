@@ -249,7 +249,7 @@ function openModal(certificateId) {
     var certificate = certificates.find(cert => cert.id === certificateId);
     document.getElementById("certificate-title").textContent = certificate.title;
     document.getElementById("certificate-image").src = certificate.link;
-    document.getElementById("download-link").href = certificate.link;
+    // document.getElementById("download-link").href = certificate.link;
     modal.style.display = "block";
 }
 

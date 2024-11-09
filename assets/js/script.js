@@ -23,16 +23,7 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 
-// const currentHour = new Date().getHours();
-// if (currentHour >= 18 || currentHour < 6) {
-//     themeLink.setAttribute('href', './assets/css/dark_style.css');
-// } else {
-//     themeLink.setAttribute('href', './assets/css/style.css');
-// }
 
-// setInterval(() => {
-//     toggleButton.click();
-// }, 200);
 
 var txt1 = `I'm currently pursuing my B.E. in Computer Science Engineering at Chettinad College
                 of
@@ -106,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Array to store certificate data
 var certificates = [
     {
         id: 1,
@@ -120,7 +110,7 @@ var certificates = [
         title: "Dr. Kalam Young Achiever Award Participation 2023",
         issuedBy: "World Youth Federation",
         issuedOn: "2023",
-        link: "files/certifications/Kalam Award Participation 2023.jpg", 
+        link: "files/certifications/Kalam Award Participation 2023.jpg",
     },
     {
         id: 3,
@@ -215,16 +205,15 @@ var certificates = [
     }
 ];
 
-// Function to dynamically generate certificates section
 function generateCertificates() {
     var container = document.getElementById("certificates-container");
 
     certificates.forEach(function (certificate) {
-        // Create the card div
+
         var card = document.createElement("div");
         card.className = "card gradient-border";
 
-        // Create the card content
+
         var cardContent = `
             <h3>${certificate.title}</h3>
             <p><strong>Issued By:</strong> ${certificate.issuedBy}</p>
@@ -237,23 +226,19 @@ function generateCertificates() {
     });
 }
 
-// Call the function to generate the certificates section
 generateCertificates();
 
-// Get the modal, close button, and modal content elements
 var modal = document.getElementById("certificate-modal");
 var closeModalBtn = document.getElementsByClassName("close")[0];
 
-// Function to open the modal and set the correct certificate data
 function openModal(certificateId) {
     var certificate = certificates.find(cert => cert.id === certificateId);
     document.getElementById("certificate-title").textContent = certificate.title;
     document.getElementById("certificate-image").src = certificate.link;
-    // document.getElementById("download-link").href = certificate.link;
+
     modal.style.display = "block";
 }
 
-// Event listener for dynamically created "View Certificate" buttons
 document.addEventListener("click", function (event) {
     if (event.target && event.target.classList.contains("open-modal-btn")) {
         var certificateId = parseInt(event.target.getAttribute("data-certificate"));
@@ -261,12 +246,10 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// When the user clicks on the close button (x), close the modal
 closeModalBtn.onclick = function () {
     modal.style.display = "none";
 }
 
-// When the user clicks outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";

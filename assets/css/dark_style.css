@@ -6,6 +6,19 @@
 
 html {
     scroll-padding-top: 100px;
+    cursor: url('../images/cursor.cur'), auto;
+}
+
+button:hover,
+a:hover {
+    cursor: url('../images/click.cur'), pointer;
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -13,6 +26,7 @@ body {
     line-height: 1.6;
     background-color: #121212;
     color: #e0e0e0;
+
 }
 
 .gradient-border {
@@ -103,7 +117,7 @@ nav ul {
 
 @media (max-width: 768px) {
     /* When screen width is less than 768px */
-    
+
     header {
         padding: 32px;
     }
@@ -261,10 +275,14 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items to the start */
-    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: flex-start;
+    /* Align items to the start */
+    height: auto;
+    /* Allow height to adjust based on content */
     position: relative;
 }
 
@@ -355,20 +373,25 @@ h2 {
     border-radius: 20px;
 }
 
-#achievements{
+#achievements {
     padding: 50px 20px;
     background-color: #1f1f1f;
     border-radius: 20px;
 }
+
 .achievements-container {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next row */
-    gap: 30px; /* Space between the items */
-    justify-content: space-between; /* Evenly space items */
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next row */
+    gap: 30px;
+    /* Space between the items */
+    justify-content: space-between;
+    /* Evenly space items */
 }
 
 .achievements-item {
-    flex: 1 1 calc(33.333% - 30px); /* 3 items per row, with gap taken into account */
+    flex: 1 1 calc(33.333% - 30px);
+    /* 3 items per row, with gap taken into account */
     background-color: #2c2c2c;
     padding: 20px;
     border-radius: 10px;
@@ -378,11 +401,13 @@ h2 {
 }
 
 .achievements-item .content {
-    margin-bottom: 20px; /* Adds space between content and image */
+    margin-bottom: 20px;
+    /* Adds space between content and image */
 }
 
 .achievements-item .image img {
-    max-width: 100%; /* Makes the image responsive */
+    max-width: 100%;
+    /* Makes the image responsive */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -390,16 +415,18 @@ h2 {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .achievements-container {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: column;
+        /* Stack items vertically on small screens */
     }
 
     .achievements-item {
-        flex: 1 1 100%; /* Make the achievements stack full-width */
+        flex: 1 1 100%;
+        /* Make the achievements stack full-width */
         margin-left: 0;
         margin-right: 0;
     }
 }
-    
+
 
 .achievements-item h3 {
     font-size: 24px;
@@ -452,34 +479,38 @@ h2 {
 
 
 
-#certifications{
+#certifications {
     padding: 50px 20px;
     background-color: #1f1f1f;
     border-radius: 20px;
 }
 
-#certifications p{
-    margin-bottom: 10px ;
+#certifications p {
+    margin-bottom: 10px;
 }
 
-#certifications .btn{
+#certifications .btn {
     padding: 12px 20px;
-    background-color: #00ff4c; /* Green color */
+    background-color: #00ff4c;
+    /* Green color */
     color: rgb(0, 0, 0);
     text-align: center;
     font-size: 16px;
-    border-radius: 30px; 
+    border-radius: 30px;
     float: right;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 
-    align-self: flex-end; /* Align the button to the right */
+    align-self: flex-end;
+    /* Align the button to the right */
     margin-top: auto;
 }
+
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
     z-index: 1001;
     left: 0;
@@ -487,19 +518,23 @@ h2 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black with opacity */
 }
 
 .modal-content {
     position: relative;
-    background-color: #1f1f1f; /* Dark background */
+    background-color: #1f1f1f;
+    /* Dark background */
     margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s ease; /* Add fade-in effect */
-    color: #e0e0e0; /* Light text color */
+    animation: fadeIn 0.5s ease;
+    /* Add fade-in effect */
+    color: #e0e0e0;
+    /* Light text color */
 }
 
 .modal-content h2 {
@@ -513,14 +548,20 @@ h2 {
         margin: 50px auto;
         width: 90%;
     }
+
     .modal-content h2 {
         font-size: 20px;
     }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .modal .close {
@@ -529,7 +570,8 @@ h2 {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
-    color: #e0e0e0; /* Light color */
+    color: #e0e0e0;
+    /* Light color */
 }
 
 .modal .close:hover {
@@ -541,13 +583,15 @@ h2 {
 }
 
 .modal-content .btn-container {
-    text-align: right; /* Aligns button to the right */
+    text-align: right;
+    /* Aligns button to the right */
 }
 
 .modal a.btn {
     margin-top: 20px;
     display: inline-block;
-    background-color: #00ff4c; /* Green color */
+    background-color: #00ff4c;
+    /* Green color */
     color: rgb(0, 0, 0);
     padding: 10px 15px;
     text-decoration: none;
@@ -555,7 +599,8 @@ h2 {
 }
 
 .modal a.btn:hover {
-    background-color: #00cc39; /* Darker shade on hover */
+    background-color: #00cc39;
+    /* Darker shade on hover */
 }
 
 #education {
@@ -720,25 +765,31 @@ h2 {
 .floating-resume {
     position: fixed;
     right: 20px;
-    bottom: 50px; /* Adjust this value to place the button higher or lower */
+    bottom: 50px;
+    /* Adjust this value to place the button higher or lower */
     z-index: 1000;
 }
+
 .btn-floating {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #00ff4c; /* Green color */
+    background-color: #00ff4c;
+    /* Green color */
     color: rgb(0, 0, 0);
     text-align: center;
     font-size: 16px;
-    border-radius: 30px; /* Rounded edges */
+    border-radius: 30px;
+    /* Rounded edges */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-floating:hover {
-    background-color: #00cc39; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarges the button */
+    background-color: #00cc39;
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slightly enlarges the button */
 }
 
 

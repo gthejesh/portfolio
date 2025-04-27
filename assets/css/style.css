@@ -6,6 +6,18 @@
 
 html {
     scroll-padding-top: 100px;
+    cursor: url('../images/cursor.cur'), auto;
+}
+
+button:hover, a:hover {
+    cursor: url('../images/click.cur'), pointer;
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {

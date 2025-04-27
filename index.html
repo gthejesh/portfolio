@@ -26,15 +26,15 @@
             </ul>
         </nav>
         <button class="theme-toggle" id="theme-toggle">
-            <img src="./assets/images/sun.png" alt="Light Mode" id="light-icon">
-            <img src="./assets/images/moon.png" alt="Dark Mode" id="dark-icon">
+            <img src="./assets/images/sun.png" draggable="false" alt="Light Mode" id="light-icon">
+            <img src="./assets/images/moon.png" draggable="false" alt="Dark Mode" id="dark-icon">
         </button>
     </header>
 
     <div class="main">
         <section id="about">
             <div class="about-photo">
-                <img src="./assets/images/myphoto.jpg" alt="Thejesh Bhagavanth">
+                <img src="./assets/images/myphoto.jpg" draggable="false" alt="Thejesh Bhagavanth">
             </div>
             <div class="about-details">
                 <div class="text-center">
@@ -67,14 +67,14 @@
                     <div class="skill-card int">CSS</div>
                     <div class="skill-card int">JavaScript</div>
                     <div class="skill-card int">Bootstrap</div>
-                    <div class="skill-card beg">ReactJS</div>
+                    <!-- <div class="skill-card beg">ReactJS</div> -->
                     <div class="skill-card int">PHP</div>
                     <div class="skill-card beg">Laravel</div>
                     <div class="skill-card int">API Development</div>
                     <div class="skill-card int">MVC Architecture</div>
                     <div class="skill-card int">MySQL</div>
                     <div class="skill-card int">Django</div>
-                    <div class="skill-card beg">Node JS</div>
+                    <!-- <div class="skill-card beg">Node JS</div> -->
                     <div class="skill-card int">Data Structures</div>
                     <div class="skill-card beg">Zoho Creator</div>
                     <div class="skill-card int">Git</div>
@@ -156,7 +156,7 @@
                         
                     </div>
                     <div class="image">
-                        <img src="files/certifications/Kalam Award Winning 2023.jpg" alt="Certification Image">
+                        <img src="files/certifications/Kalam Award Winning 2023.jpg" draggable="false" alt="Certification Image">
                     </div>
                 </div>
 
@@ -168,7 +168,7 @@
 <br>                    </div>
                     <div class="image">
                         <img src="files/certifications/Final Participation StartUp Cafe CED Anna University.png"
-                            alt="Certification Image">
+                            draggable="false" alt="Certification Image">
                     </div>
                 </div>
         </section>
@@ -178,16 +178,15 @@
                 <h2>Certifications / Seminars / Workshops / Events</h2>
             </div>
             <div class="card-container" id="certificates-container">
-                <!-- Cards will be dynamically inserted here by JavaScript -->
+
             </div>
         </section>
 
-        <!-- Modal Structure -->
         <div id="certificate-modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2 id="certificate-title">Certificate Title</h2>
-                <img id="certificate-image" src="" alt="Certificate Image" width="100%" />
+                <img id="certificate-image" src="" draggable="false" alt="Certificate Image" width="100%" />
                 <!-- <div class="btn-container">
                     <a id="download-link" download href="" target="_blank" class="btn">Download Certificate</a>
                 </div> -->
@@ -274,7 +273,9 @@
         </section>
 
         <div class="floating-resume">
-            <a href="./files/resume.pdf" target="_blank" class="btn-floating">View Resume</a>
+            <a href="./files/resume.pdf" target="_blank" class="btn-floating">
+                View Resume
+            </a>
         </div>
 
         <!-- <footer>

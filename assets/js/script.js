@@ -30,9 +30,9 @@ var txt1 = `I'm currently pursuing my B.E. in Computer Science Engineering at Ch
                 Engineering and Technology, with a CGPA of 7.98 (up to the 6th semester). I have a passion for software
                 development, specializing in Django web applications, and I'm proficient in languages like C, C++,
                 Python,
-                and Java. I also have experience in front-end development with HTML, CSS, JavaScript, and ReactJS, as
+                and Java. I also have experience in front-end development with HTML, CSS, JavaScript, Bootstrap as
                 well
-                as back-end development using Django, PHP and Node.js.`;
+                as back-end development using Django, PHP and Laravel.`;
 var txt2 = `Over the course of my studies, I've built several projects, including INVO, a platform connecting
                 businesses
                 with customers, and a legal awareness platform using interactive quizzes. I've been honored with the Dr.

@@ -2,10 +2,6 @@
 const toggleButton = document.getElementById('theme-toggle');
 const themeLink = document.getElementById('theme-link');
 
-if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
-    themeLink.setAttribute('href', './assets/css/style.css');
-}
-
 toggleButton.addEventListener('click', () => {
     if (themeLink.getAttribute('href') === './assets/css/dark_style.css') {
         themeLink.setAttribute('href', './assets/css/style.css');

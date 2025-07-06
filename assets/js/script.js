@@ -1,14 +1,29 @@
-
-const toggleButton = document.getElementById('theme-toggle');
 const themeLink = document.getElementById('theme-link');
+const toggleButton = document.getElementById('theme-toggle');
+
+let savedTheme = localStorage.getItem('theme');
+
+if (!savedTheme) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    savedTheme = prefersDark ? 'dark' : 'light';
+}
+
+setTheme(savedTheme);
 
 toggleButton.addEventListener('click', () => {
-    if (themeLink.getAttribute('href') === './assets/css/dark_style.css') {
-        themeLink.setAttribute('href', './assets/css/style.css');
-    } else {
-        themeLink.setAttribute('href', './assets/css/dark_style.css');
-    }
+    const newTheme = themeLink.getAttribute('href').includes('dark') ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
 });
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        themeLink.setAttribute('href', './assets/css/dark_style.css');
+    } else {
+        themeLink.setAttribute('href', './assets/css/style.css');
+    }
+}
+
 
 document.getElementById("menu-icon").onclick = function () {
     var nav = document.querySelector("nav");

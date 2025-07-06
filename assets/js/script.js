@@ -25,19 +25,17 @@ document.querySelectorAll("nav a").forEach(link => {
 
 
 
-var txt1 = `I'm currently pursuing my B.E. in Computer Science Engineering at Chettinad College
-                of
+var txt1 = `I have completed my B.E. in Computer Science Engineering at Chettinad College of
                 Engineering and Technology, with a CGPA of 8.11. I have a passion for software
-                development, specializing in Django web applications, and I'm proficient in languages like C,
-                Python,
-                and Java. I also have experience in front-end development with HTML, CSS, JavaScript, Bootstrap as
-                well
+                development, specializing in Django and Laravel, and I'm proficient in languages like C,
+                Python, and Java. I have an internship experience of 6 months at CybrTekNinja as a 
+                Laravel Developer where I have developed APIs with Laravel, which are integrated with the frontend.
+                I also have experience in front-end development with HTML, CSS, JavaScript, Bootstrap as well
                 as back-end development using Django, PHP and Laravel.`;
 var txt2 = `Over the course of my studies, I've built several projects, including INVO, a platform connecting
-                businesses
-                with customers, and a legal awareness platform using interactive quizzes. I've been honored with the Dr.
-                Kalam Young Achiever Award in 2023 for my work on INVO, which also led me to the finals of StartUp Café
-                at
+                businesses with customers, and a legal awareness platform using interactive quizzes. 
+                I've been honored with the Dr. Kalam Young Achiever Award in 2023 for my work on INVO, 
+                which also led me to the finals of StartUp Café at
                 Startify 2.0 in 2024. My goal is to continue learning and building impactful digital solutions.`;
 var speed = 0;
 
